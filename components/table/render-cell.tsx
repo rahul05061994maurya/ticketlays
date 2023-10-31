@@ -4,6 +4,8 @@ import { DeleteIcon } from "../icons/table/delete-icon";
 import { EditIcon } from "../icons/table/edit-icon";
 import { EyeIcon } from "../icons/table/eye-icon";
 import { users } from "./data";
+import { deleteData } from "../../utils/accounts/api";
+import DeleteModel from "../accounts/delete-model";
 
 interface Props {
   user: (typeof users)[number];
@@ -71,14 +73,16 @@ export const RenderCell = ({ user, columnKey }: Props) => {
             </Tooltip>
           </div>
           <div>
-            <Tooltip
-              content="Delete user"
-              color="danger"
-              onClick={() => console.log("Delete user", user.id)}
-            >
-              <button>
+            <Tooltip content="Delete user" color="danger">
+              <DeleteModel id={user.id} />
+              {/* <button
+              onClick={() => {
+                console.log("Delete user", user.id);
+                deleteData(user.id);
+              }}
+              >
                 <DeleteIcon size={20} fill="#FF0080" />
-              </button>
+              </button> */}
             </Tooltip>
           </div>
         </div>
