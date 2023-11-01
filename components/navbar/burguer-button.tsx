@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { useSidebarContext } from "../layout/layout-context";
 import { StyledBurgerButton } from "./navbar.styles";

@@ -1,19 +1,18 @@
+"use client";
+
 import "../styles/globals.css";
-import type { AppProps } from "next/app";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { NextUIProvider } from "@nextui-org/react";
 import { Layout } from "../components/layout/layout";
 
-function MyApp({ Component, pageProps }: AppProps) {
+const ClientLayout = function ({ children }: { children: React.ReactNode }) {
   return (
     <NextThemesProvider defaultTheme="system" attribute="class">
       <NextUIProvider>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <Layout>{children}</Layout>
       </NextUIProvider>
     </NextThemesProvider>
   );
-}
+};
 
-export default MyApp;
+export default ClientLayout;
