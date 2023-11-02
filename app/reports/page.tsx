@@ -1,7 +1,7 @@
 import React from "react";
-
+import Reports from "./Reports";
 const page = () => {
-  return <div>this is report page</div>;
+  return <Reports />;
 };
 
 export default page;
