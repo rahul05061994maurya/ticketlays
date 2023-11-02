@@ -1,3 +1,4 @@
+"use client";
 import {
   Link,
   Table,
@@ -7,11 +8,19 @@ import {
   TableHeader,
   TableRow,
 } from "@nextui-org/react";
-import React from "react";
+import React, { useEffect } from "react";
 import { columns, users } from "./data";
 import { RenderCell } from "./render-cell";
-
+import { useAccountData } from "../../services/accounts";
 export const TableWrapper = () => {
+  const { data, error, isLoading } = useAccountData("");
+
+  console.log("api data", data, isLoading);
+
+  const {} = useAccountData("");
+  if (isLoading) {
+    return <p>loading...</p>;
+  }
   return (
     <div className=" w-full flex flex-col gap-4">
       <Table aria-label="Example table with custom cells">
@@ -26,7 +35,7 @@ export const TableWrapper = () => {
             </TableColumn>
           )}
         </TableHeader>
-        <TableBody items={users}>
+        <TableBody items={data}>
           {(item) => (
             <TableRow>
               {(columnKey) => (
