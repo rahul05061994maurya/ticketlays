@@ -8,6 +8,7 @@ import { CardAgents } from "./card-agents";
 import { CardTransactions } from "./card-transactions";
 import { Link } from "@nextui-org/react";
 import NextLink from "next/link";
+import { users, columns } from "../table/data";
 
 const Chart = dynamic(
   () => import("../charts/steam").then((mod) => mod.Steam),
@@ -62,7 +63,7 @@ export const Content = () => (
           View All
         </Link>
       </div>
-      <TableWrapper />
+      <TableWrapper users={users} columns={columns} page="home" />
     </div>
   </div>
 );

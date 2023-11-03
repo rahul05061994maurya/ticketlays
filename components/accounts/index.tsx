@@ -10,6 +10,7 @@ import { UsersIcon } from "../icons/breadcrumb/users-icon";
 import { SettingsIcon } from "../icons/sidebar/settings-icon";
 import { TableWrapper } from "../table/table";
 import { AddUser } from "./add-user";
+import { users, columns } from "../table/data";
 
 export const Accounts = () => {
   return (
@@ -56,7 +57,7 @@ export const Accounts = () => {
         </div>
       </div>
       <div className="max-w-[95rem] mx-auto w-full">
-        <TableWrapper />
+        <TableWrapper columns={columns} users={users} page="accounts" />
       </div>
     </div>
   );

@@ -1,3 +1,34 @@
+export interface ReportsProps {
+  BackgroundColor: string;
+  Trans_Id: string;
+  Bkg_Id: string;
+  Bkg_Commit: string;
+  Pay_Status: string;
+  Appl_Name: string;
+  Cinema_Name: string;
+  Screen_Name: string;
+  Event_Name: string;
+  Trans_Date: string;
+  Show_Date: string;
+  Show_Date_Disp: string;
+  Ticket_Qty: string;
+  Ticketwise_Qty: string;
+  Seat_Info: string;
+  Ticket_Amt: string;
+  Item_Desc: string;
+  ItemWise_Amt: string;
+  ItemWise_Qty: string;
+  Inv_Qty: string;
+  Inv_Amt: string;
+  Additional_Desc: string;
+  Add_strAmt: string;
+  Add_Charges: string;
+  Cinema_DiscAmt: string;
+  Cinema_OfferCode: string;
+  ETicket_Status: string;
+  SocialDistancing_count: string;
+}
+
 export const report = [
   {
     BackgroundColor: "#FFFFFF",
