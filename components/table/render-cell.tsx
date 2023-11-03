@@ -14,7 +14,7 @@ interface Props {
 export const RenderCell = ({ user, columnKey }: Props) => {
   // @ts-ignore
   const cellValue = user[columnKey];
-  console.log("cellValue", cellValue, columnKey);
+
   switch (columnKey) {
     case "name":
       return (

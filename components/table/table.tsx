@@ -25,9 +25,9 @@ interface Prosp {
 export const TableWrapper = ({ users, columns, page }: Prosp) => {
   const { data, isLoading } = useAccountData("");
 
-  if (isLoading) {
-    return <p>loading...</p>;
-  }
+  // if (isLoading) {
+  //   return <p>loading...</p>;
+  // }
   return (
     <div className=" w-full flex flex-col gap-4">
       <Table

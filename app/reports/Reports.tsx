@@ -10,6 +10,5 @@ for (const [key, val] of Object.entries(report[0])) {
 }
 
 export default function Reports() {
-  console.log(reportcol);
   return <TableWrapper users={report} columns={reportcol} page="report" />;
 }
